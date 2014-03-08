@@ -4,6 +4,7 @@ Kaleidos Wordpress Theme
 Kaleidos theme is a WordPress theme with a clean, simple and minimalistic layout. Theme is built in special for readers with high contrast and responsive approach.
 
 Features
+---------
 
   - Responsive
   - Multilanguage-ready based on taxonomies
@@ -12,9 +13,9 @@ Features
   - High contrast and minimal.
   - Multiuser-ready.
 
-Version
-----
-0.1
+Based on
+---------
+Underscore Stater theme by Automattic > http://underscores.me/
 
 License
 -----------
