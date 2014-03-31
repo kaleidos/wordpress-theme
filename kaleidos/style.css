@@ -27,6 +27,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------------------------
 1.0 - Reset
 2.0 - Typography
+    2.1 - Fonts
 3.0 - Elements
 4.0 - Inputs and buttons
 5.0 - Navigation
@@ -44,7 +45,8 @@ and Blueprint http://www.blueprintcss.org/
 12.0 - Media
 13.0 - Helpers
 14.0 - User Styles
-15.0 - Responsive
+15.0 - Header animation
+*.0 - Responsive
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -199,6 +201,61 @@ small {
 big {
     font-size: 125%;
 }
+
+/*--------------------------------------------------------------
+2.1 Fonts
+--------------------------------------------------------------*/
+
+.icon {
+    font-family: "kaleidos-blog";
+}
+
+.icon:before {
+    vertical-align: middle;
+}
+
+@font-face {
+  font-family: "kaleidos-blog";
+  src:url("fonts/kaleidos-blog.eot");
+  src:url("fonts/kaleidos-blog.eot?#iefix") format("embedded-opentype"),
+    url("fonts/kaleidos-blog.woff") format("woff"),
+    url("fonts/kaleidos-blog.ttf") format("truetype"),
+    url("fonts/kaleidos-blog.svg#kaleidos-blog") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "kaleidos-blog" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "kaleidos-blog" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-world:before {
+  content: "a";
+}
+
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -720,24 +777,27 @@ object {
 }
 
 .entry-date {
-    position: absolute;
-    width: 50px;
-    top: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
+    top:0;
+    left: 0;
 }
+
 .entry-date .day, .entry-date .month {
     color: #626262;
-    display: block;
-    text-align: center;
+    display: inline;
+    text-align: left;
 }
+
 .entry-date .day {
     font-size: 30px;
 }
+
 .entry-date .month {
     font-size: 22px;
     text-transform: uppercase;
     position: relative;
-    top: -10px;
+    top: -0;
 }
 
 
@@ -763,6 +823,10 @@ object {
     font-size: 18px;
     color: #FFF;
     padding-top: 5px;
+}
+
+.entry-author .entry-author-author a {
+    color: #FFFFFF;
 }
 
 .entry-author-color {
@@ -797,15 +861,14 @@ object {
 }
 
 /* Single */
-
 .single article {
-    width: 650px;
-    float:left;
+    width: 100%;
+    float: none;
 }
 
 .single aside {
-    width: 200px;
-    float: right;
+    width: 100%;
+    float: none;
 }
 
 .single .post {
@@ -857,25 +920,587 @@ object {
     padding: 0;
 }
 
+.single .more-posts ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.single .more-posts li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+.single .more-posts li:last-child {
+    border: none;
+}
+
+.single .more-posts ul article {
+    width: 100%;
+    float: none;
+}
+
+/* Related posts */
+.related-posts h3 {
+    font-size: 2rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    line-height: 1.2em;
+}
+
+.related-posts h2 {
+    font-size: 3rem;
+    line-height: 1.2em;
+}
+
+.related-posts .single-related-post {
+    width: 100%;
+    float: none;
+    padding: 0;
+}
+
 /*--------------------------------------------------------------
-15.0 Responsive
+15.0 Header animation
 --------------------------------------------------------------*/
+
+.top-animation-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+}
+
+.gradient-light {
+    width: 6%;
+    height: 20px;
+    position: absolute;
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    top: 0;
+    margin-top: -4%;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -opera-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -opera-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+/* Alonso */
+.username1 {
+    background: #FFFF00;
+    left: 0;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 2s, 200ms;
+    -moz-animation-delay: 2s, 200ms;
+    -opera-animation-delay: 2s, 200ms;
+    animation-delay: 2s, 200ms;
+
+    -webkit-animation-duration: 2000ms;
+    -moz-animation-duration: 2000ms;
+    -opera-animation-duration: 2000ms;
+    animation-duration: 2000ms;
+}
+
+/* Palba */
+.username2 {
+    background: #708090;
+    left: 5%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -opera-animation-delay: 2s;
+    animation-delay: 2s;
+
+    -webkit-animation-duration: 3000ms;
+    -moz-animation-duration: 3000ms;
+    -opera-animation-duration: 3000ms;
+    animation-duration: 3000ms;
+}
+
+/* JF */
+.username3 {
+    background: #40826D;
+    left: 10%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -opera-animation-delay: .2s;
+    animation-delay: .2s;
+
+    -webkit-animation-duration: 1300ms;
+    -moz-animation-duration: 1300ms;
+    -opera-animation-duration: 1300ms;
+    animation-duration: 1300ms;
+}
+
+/* Alex */
+.username4 {
+    background: #FC8EAC;
+    left: 15%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -opera-animation-delay: 1s;
+    animation-delay: 1s;
+
+    -webkit-animation-duration: 3000ms;
+    -moz-animation-duration: 3000ms;
+    -opera-animation-duration: 3000ms;
+    animation-duration: 3000ms;
+}
+
+/* Andrei*/
+.username5 {
+    background: #A5694F;
+    left: 20%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -opera-animation-delay: 3s;
+    animation-delay: 3s;
+
+    -webkit-animation-duration: 2100ms;
+    -moz-animation-duration: 2100ms;
+    -opera-animation-duration: 2100ms;
+    animation-duration: 2100ms;
+}
+
+/* David */
+.username6 {
+    background: #FFF8E7;
+    left: 25%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -opera-animation-delay: 1s;
+    animation-delay: 1s;
+
+    -webkit-animation-duration: 3000ms;
+    -moz-animation-duration: 3000ms;
+    -opera-animation-duration: 3000ms;
+    animation-duration: 3000ms;
+}
+
+/* miguel */
+.username7 {
+    background: #C0FF33;
+    left: 30%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -opera-animation-delay: 4s;
+    animation-delay: 4s;
+
+    -webkit-animation-duration: 4000ms;
+    -moz-animation-duration: 4000ms;
+    -opera-animation-duration: 4000ms;
+    animation-duration: 4000ms;
+}
+
+/* Tere */
+.username8 {
+    background: #0F0F0F;
+    left: 35%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -opera-animation-delay: .2s;
+    animation-delay: .2s;
+
+    -webkit-animation-duration: 1500ms;
+    -moz-animation-duration: 1500ms;
+    -opera-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+}
+/* Toño */
+.username20 {
+    background: #67CF00;
+    left: 40%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -opera-animation-delay: 3s;
+    animation-delay: 3s;
+
+    -webkit-animation-duration: 2000ms;
+    -moz-animation-duration: 2000ms;
+    -opera-animation-duration: 2000ms;
+    animation-duration: 2000ms;
+}
+/* Jesús */
+.username9 {
+    background: #007000;
+    left: 45%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -opera-animation-delay: 2s;
+    animation-delay: 2s;
+
+    -webkit-animation-duration: 2000ms;
+    -moz-animation-duration: 2000ms;
+    -opera-animation-duration: 2000ms;
+    animation-duration: 2000ms;
+}
+/* Mario */
+.username10 {
+    background: #FF9900;
+    left: 50%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -opera-animation-delay: 1s;
+    animation-delay: 1s;
+
+    -webkit-animation-duration: 4000ms;
+    -moz-animation-duration: 4000ms;
+    -opera-animation-duration: 4000ms;
+    animation-duration: 4000ms;
+}
+/* Al */
+.username11 {
+    background: #B6DA55;
+    left: 55%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -opera-animation-delay: 3s;
+    animation-delay: 3s;
+
+    -webkit-animation-duration: 4500ms;
+    -moz-animation-duration: 4500ms;
+    -opera-animation-duration: 4500ms;
+    animation-duration: 4500ms;
+}
+/* Anler */
+.username12 {
+    background: #2099DB;
+    left: 60%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -opera-animation-delay: 1s;
+    animation-delay: 1s;
+
+    -webkit-animation-duration: 2500ms;
+    -moz-animation-duration: 2500ms;
+    -opera-animation-duration: 2500ms;
+    animation-duration: 2500ms;
+}
+/* Xavi */
+.username13 {
+    background: #CC0000;
+    left: 65%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -opera-animation-delay: 1s;
+    animation-delay: 1s;
+
+    -webkit-animation-duration: 1500ms;
+    -moz-animation-duration: 1500ms;
+    -opera-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+}
+/* Dani */
+.username14 {
+    background: #71A6D2;
+    left: 70%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -opera-animation-delay: 2s;
+    animation-delay: 2s;
+
+    -webkit-animation-duration: 4500ms;
+    -moz-animation-duration: 4500ms;
+    -opera-animation-duration: 4500ms;
+    animation-duration: 4500ms;
+}
+/* Iván */
+.username15 {
+    background: #4B0082;
+    left: 75%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -opera-animation-delay: .3s;
+    animation-delay: .3s;
+
+    -webkit-animation-duration: 1500ms;
+    -moz-animation-duration: 1500ms;
+    -opera-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+}
+/* Yami */
+.username16 {
+    background: #D70A53;
+    left: 80%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -opera-animation-delay: .1s;
+    animation-delay: .1s;
+
+    -webkit-animation-duration: 2500ms;
+    -moz-animation-duration: 2500ms;
+    -opera-animation-duration: 2500ms;
+    animation-duration: 2500ms;
+}
+/* Andrés */
+.username17 {
+    background: #002E33;
+    left: 85%;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -opera-animation-name: slideout;
+    animation-name: slideout;
+
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -opera-animation-delay: 3s;
+    animation-delay: 3s;
+
+    -webkit-animation-duration: 3500ms;
+    -moz-animation-duration: 3500ms;
+    -opera-animation-duration: 3500ms;
+    animation-duration: 3500ms;
+}
+/* PabloR */
+.username18 {
+    background: #761CEC;
+    left: 90%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -opera-animation-delay: .1s;
+    animation-delay: .1s;
+
+    -webkit-animation-duration: 2000ms;
+    -moz-animation-duration: 2000ms;
+    -opera-animation-duration: 2000ms;
+    animation-duration: 2000ms;
+}
+/* Ramiro */
+.username19 {
+    background: #FFCC00;
+    left: 95%;
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -opera-animation-name: slidein;
+    animation-name: slidein;
+
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -opera-animation-delay: 4s;
+    animation-delay: 4s;
+
+    -webkit-animation-duration: 4500ms;
+    -moz-animation-duration: 4500ms;
+    -opera-animation-duration: 4500ms;
+    animation-duration: 4500ms;
+}
+
+@-moz-keyframes slidein {
+    from {
+        margin-left:1%;
+        margin-top: -4%;
+    }
+    to {
+        margin-left:-1%;
+        margin-top: 0%;
+    }
+}
+
+@-webkit-keyframes slidein {
+    from {
+        margin-left:1%;
+        margin-top: -4%;
+    }
+    to {
+        margin-left:-1%;
+        margin-top: 0%;
+    }
+}
+
+@-moz-keyframes slideout {
+    from {
+        margin-right:5%;
+        margin-top: -4%;
+        .filter(saturate(100%));
+    }
+    to {
+        margin-right:0%;
+        margin-top: 0%;
+        .filter(saturate(200%));
+    }
+}
+
+@-webkit-keyframes slideout {
+    from {
+        margin-right:5%;
+        margin-top: -4%;
+        .filter(saturate(100%));
+    }
+    to {
+        margin-right:0%;
+        margin-top: 0%;
+        .filter(saturate(200%));
+    }
+}
+
+/*--------------------------------------------------------------
+*.0 Responsive
+--------------------------------------------------------------*/
+
+.hide-on-screen {
+    display: block;
+}
+
+.hide-on-mobile {
+    display: none;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 768px) {
+    .hide-on-screen {
+        display: none;
+    }
+
+    .hide-on-mobile {
+        display: block;
+    }
+
     .content-area {
         width: 960px;
         margin: 0 auto;
         padding: 0;
+        padding-bottom: 50px;
     }
     .language {
         width: 45%;
     }
+
     .post {
         padding-left: 60px;
     }
+
     .entry-date {
-        top: 70px;
+        position: absolute;
+        width: 50px;
+        top: 85px;
         left: -60px;
     }
+    .entry-date .day, .entry-date .month {
+        display: block;
+        text-align: center;
+    }
+    .entry-date .month {
+        top: -10px;
+    }
+
+    .term-page {
+        text-align: center;
+    }
+
+    /* Single article */
+
+    .single article {
+        width: 650px;
+        float:left;
+    }
+
+    .single aside {
+        width: 200px;
+        float: right;
+    }
+
+    .related-posts .single-related-post {
+        width: 48%;
+        float: left;
+        padding: 0 2%;
+    }
+
 }

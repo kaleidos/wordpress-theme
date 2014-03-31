@@ -34,6 +34,7 @@
     <p class="description-author">
         <?php the_author_meta('description'); ?>
     </p>
+    <?php /*
     <ul class="entry-meta">
         <li>
             <small>Posted: <?php the_time('d M Y') ?></small>
@@ -50,7 +51,46 @@
                 <?php edit_post_link( __( 'Edit', 'kaleidos' ), '<span class="edit-link">', '</span>' ); ?>
             </small>
         <?php } ?>
-    </ul><!-- .entry-meta -->
+    </ul>
+    */ ?>
+
+        <?php
+
+            $the_query = new WP_Query(
+                array(
+                    'author' => get_the_author_meta('ID'),
+                    'orderby' => 'comment_count',
+                    'posts_per_page' => '5'
+                )
+            );
+
+            if ( $the_query->have_posts() ) {
+                ?>
+                <section class="more-posts">
+                    <h3>
+                        <?php echo _('Top posts'); ?>
+                    </h3>
+                    <ul>
+                <?php
+                while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+            ?>
+            <li>
+                <article>
+                    <a href="<?php the_permalink(); ?>" title="Link to <?php the_title(); ?>">
+                        <?php the_title(); ?>
+                    </a>
+                </article>
+             </li>
+             <?php
+                }
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();
+
+         ?>
+         </ul>
+    </section>
 </aside>
 
 <?php } else { ?>
