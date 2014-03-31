@@ -826,13 +826,15 @@ object {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-clip: padding-box;
+    position: relative;
     width: 64px;
     height: 64px;
+    opacity: 1;
      -webkit-box-shadow: none;
             box-shadow: none;
 }
 
-.entry-author-image .icon {
+.home .entry-author-image .icon {
     opacity: 0;
     position: absolute;
     top: 6px;
@@ -842,14 +844,15 @@ object {
     z-index: 99;
 }
 
-.entry-author-image:hover img {
+.home .entry-author-image:hover img {
+    opacity: .6;
     transition-property: blur, grayscale;
     transition-duration: .3s;
     filter: blur(1px) grayscale(100%);
     -webkit-filter: blur(1px) grayscale(100%);
 }
 
-.entry-author-image:hover .icon {
+.home .entry-author-image:hover .icon {
     transition-property: all;
     transition-duration: .5s;
     opacity: .6;
@@ -1581,7 +1584,7 @@ object {
         margin-right: 20px;
     }
 
-    .entry-author li{
+    .single-post .entry-author li{
         text-align: left;
     }
 
