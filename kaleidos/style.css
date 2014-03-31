@@ -154,7 +154,10 @@ dfn, cite, em, i {
     font-style: italic;
 }
 blockquote {
-    margin: 0 1.5em;
+    padding: 0 1.5em;
+    border-left: 4px solid rgba(255,255,255, .1);
+    font-style: italic;
+    font-size: 2rem;
 }
 address {
     margin: 0 0 1.5em;
@@ -255,7 +258,9 @@ big {
 .icon-world:before {
   content: "a";
 }
-
+.icon-link:before {
+  content: "b";
+}
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -813,14 +818,42 @@ object {
     float: left;
     width: 64px;
     vertical-align: middle;
-    margin-right: 20px;
+    margin-right: 10px;
+    overflow: hidden;
 }
+
 .entry-author-image img {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-clip: padding-box;
     width: 64px;
     height: 64px;
+     -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.entry-author-image .icon {
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 14px;
+    color: #000;
+    font-size: 34px;
+    z-index: 99;
+}
+
+.entry-author-image:hover img {
+    transition-property: blur, grayscale;
+    transition-duration: .3s;
+    filter: blur(1px) grayscale(100%);
+    -webkit-filter: blur(1px) grayscale(100%);
+}
+
+.entry-author-image:hover .icon {
+    transition-property: all;
+    transition-duration: .5s;
+    opacity: .6;
+    top: 11px;
 }
 
 .entry-author {
@@ -833,6 +866,10 @@ object {
     padding-top: 5px;
 }
 
+.single-post .entry-author li{
+    text-align: center;
+}
+
 .entry-author .entry-author-author a {
     color: #FFFFFF;
 }
@@ -840,10 +877,10 @@ object {
 .entry-author-color {
     width: 21px;
     height: 21px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-    vertical-align: bottom;
+    display: inline-block;
+    float: none;
+    margin-right: 5px;
+    vertical-align: top;
 }
 
 .entry-author-position {
@@ -901,7 +938,22 @@ object {
 }
 
 .entry-content h4 {
+    font-size: 1.7rem;
+}
+
+.entry-content h5 {
     font-size: 1.5rem;
+}
+
+.entry-content h6 {
+    font-size: 1.2rem;
+}
+
+.entry-content .size-full,
+.entry-content .size-medium {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* Single */
@@ -1487,7 +1539,7 @@ object {
     display: none;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
+/* Screen (portrait and landscape) ----------- */
 @media only screen and (min-width: 768px) {
     .hide-on-screen {
         display: none;
@@ -1523,6 +1575,19 @@ object {
     }
     .entry-date .month {
         top: -10px;
+    }
+
+    .entry-author img{
+        margin-right: 20px;
+    }
+
+    .entry-author li{
+        text-align: left;
+    }
+
+    .entry-author-color {
+        display: block;
+        float: left;
     }
 
     .term-page {

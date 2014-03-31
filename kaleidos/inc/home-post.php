@@ -7,6 +7,7 @@
         <div class="entry-author-image">
             <a href="<?php echo get_the_author_meta( 'user_url' ) ?>"
                title="<?php echo get_the_author_meta( 'name' ) ?>" target="_blank">
+                <span class="icon icon-link"></span>
                 <?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
             </a>
         </div>
