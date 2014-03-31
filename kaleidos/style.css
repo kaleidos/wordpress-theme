@@ -862,10 +862,19 @@ object {
     display: block;
 }
 
+.entry-title .post-edit-link {
+    display: inline;
+    color: #ffb093;
+}
+
 .entry-title a:hover{
     color: #a64f2d;
     transition-property: color;
     transition-duration: .3s;
+}
+
+.entry-meta {
+    margin-bottom: 20px;
 }
 
 /* Entry-content */

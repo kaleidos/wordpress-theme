@@ -34,28 +34,8 @@
     <p class="description-author">
         <?php the_author_meta('description'); ?>
     </p>
-    <?php /*
-    <ul class="entry-meta">
-        <li>
-            <small>Posted: <?php the_time('d M Y') ?></small>
-        </li>
-        <li>
-            <small>Category: <?php the_category(', ') ?></small>
-        </li>
-        <li>
-            <small>Tags: <?php the_tags(); ?></small>
-        </li>
-        <?php if ( ! is_admin() ) { ?>
-        <li>
-            <small>
-                <?php edit_post_link( __( 'Edit', 'kaleidos' ), '<span class="edit-link">', '</span>' ); ?>
-            </small>
-        <?php } ?>
-    </ul>
-    */ ?>
 
         <?php
-
             $the_query = new WP_Query(
                 array(
                     'author' => get_the_author_meta('ID'),

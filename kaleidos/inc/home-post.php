@@ -37,5 +37,8 @@
             </a>
         </h1>
         <?php the_excerpt() ?>
+        <div class="entry-meta">
+            <small><?php echo _('About ') ?><?php the_category(', ') ?></small>
+        </div>
     </div>
 </article>

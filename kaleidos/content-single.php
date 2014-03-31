@@ -8,8 +8,17 @@
     <header class="entry-header">
         <h1 class="entry-title">
             <?php the_title(); ?>
+            <?php if ( ! is_admin() ) { ?>
+                <?php edit_post_link( __( 'Edit', 'kaleidos' ), '<span class="edit-link">', '</span>' ); ?>
+            <?php } ?>
         </h1>
     </header><!-- .entry-header -->
+
+    <ul class="entry-meta">
+        <li>
+            <small><?php the_category(', ') ?></small>
+        </li>
+    </ul>
 
     <div class="entry-content">
         <?php the_content(); ?>
