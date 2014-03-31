@@ -21,6 +21,23 @@
                 //Reset post Data
                 wp_reset_postdata();
                 ?>
+
+                <div class="term-page">
+                    <span class="icon icon-world">
+                         <?php echo _('Ver todos los posts en '); ?>
+                    </span>
+                    <?php
+                         $terms = get_terms( 'lang', array(
+                             'slug' => 'es'
+                         ) );
+                        foreach ( $terms as $term ) {
+                            $term = sanitize_term( $term, 'lang' );
+                            $term_link = get_term_link( $term, 'lang' );
+                            echo '<a href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
+                        }
+                    ?>
+                </div>
+
             </section>
             <?php else : ?>
                 <p>Mmmm...parece que no hay posts con esta query</p>
@@ -44,6 +61,22 @@
                 //Reset post Data
                 wp_reset_postdata();
                 ?>
+                <div class="term-page">
+                    <span class="icon icon-world">
+                         <?php echo _('Ver todos los posts en '); ?>
+                    </span>
+                    <?php
+                         $terms = get_terms( 'lang', array(
+                             'slug' => 'en'
+                         ) );
+                        foreach ( $terms as $term ) {
+                            $term = sanitize_term( $term, 'lang' );
+                            $term_link = get_term_link( $term, 'lang' );
+                            echo '<a href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
+                        }
+                    ?>
+                 </div>
+
             </section>
             <?php else : ?>
                 <p>Mmmm...parece que no hay posts con esta query</p>

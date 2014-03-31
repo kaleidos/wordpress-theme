@@ -5,12 +5,18 @@
             <span class="month"><?php the_time('M'); ?></span>
         </div>
         <div class="entry-author-image">
-            <?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
+            <a href="<?php echo get_the_author_meta( 'user_url' ) ?>"
+               title="<?php echo get_the_author_meta( 'name' ) ?>" target="_blank">
+                <?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
+            </a>
         </div>
         <ul class="entry-author">
             <li class="entry-author-data">
                 <span class="entry-author-author">
-                    <?php the_author(); ?>
+                    <a href="<?php echo get_the_author_meta( 'user_url' ) ?>"
+                    title="<?php echo get_the_author_meta( 'name' ) ?>" target="_blank">
+                        <?php the_author(); ?>
+                    </a>
                 </span>
             </li>
             <li>

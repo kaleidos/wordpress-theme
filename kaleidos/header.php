@@ -14,18 +14,17 @@
     <div id="page" class="hfeed site">
 
         <header id="masthead" class="site-header" role="banner">
-             <div class="top-color" style="background: linear-gradient(to right, <?php
-                     $editorUsers = get_users();
-                     $numItems = count($editorUsers);
-                     $i = 0;
-                     foreach ($editorUsers as $key => $user) {
-                         if(++$i != $numItems) {
-                             echo $user->user_color . ', ';
-                         } else {
-                             echo $user->user_color;
-                         }
-                     }
-                     ?>);"></div>
+            <div class="top-animation-wrapper hide-on-mobile">
+                <?php
+                    $editorUsers = get_users();
+                    $numItems = count($editorUsers);
+                    $i = 0;
+                    while ($i < 20) {
+                        $i++;
+                        echo '<div class="gradient-light username' . $i . '"></div>';
+                    }
+                ?>
+            </div>
 
             <div class="site-branding">
                 <h1 class="site-title">
