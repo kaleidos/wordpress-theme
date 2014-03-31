@@ -36,7 +36,7 @@
         $category = get_the_category();
         $the_query = new WP_Query(
             array(
-                'category' => $category[0]->cat_name,
+                'cat' => $category[0]->term_id,
                 'orderby' => 'rand',
                 'posts_per_page' => '2'
             )
