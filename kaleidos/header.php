@@ -14,19 +14,34 @@
 
     <div id="page" class="hfeed site">
 
-        <header id="masthead" class="site-header" role="banner">
-            <div class="top-animation-wrapper hide-on-mobile">
-                <?php
-                    $editorUsers = get_users();
-                    $numItems = count($editorUsers);
-                    $i = 0;
-                    while ($i < 20) {
-                        $i++;
-                        echo '<div class="gradient-light username' . $i . '"></div>';
+    <header id="masthead" class="site-header" role="banner">
+    <?php /*
+    <div class="top-color" style="background: linear-gradient(to right,
+            <?php
+                $editorUsers = get_users();
+                $numItems = count($editorUsers);
+                $i = 0;
+                foreach ($editorUsers as $key => $user) {
+                    if(++$i != $numItems) {
+                        echo $user->user_color . ', ';
+                    } else {
+                        echo $user->user_color;
                     }
-                ?>
-            </div>
-
+                }
+            ?>);
+      "></div>
+      */ ?>
+    <div class="top-animation-wrapper">
+            <?php
+                $editorUsers = get_users();
+                $numItems = count($editorUsers);
+                $i = 0;
+                while ($i < 20) {
+                    $i++;
+                    echo '<div class="square username' . $i . '"></div>';
+                }
+            ?>
+     </div>
             <div class="language-selector">
                 <?php
                     $terms = get_terms( 'lang', array(
@@ -62,16 +77,11 @@
                 </h2>
             </div>
 
-            <?php /*
             <nav id="site-navigation" class="main-navigation" role="navigation">
-
-                <h1 class="menu-toggle">
-                    <?php _e( 'Menu', 'kaleidos' ); ?>
-                </h1>
-                <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-
+                <div class="wrapper">
+                    <?php get_search_form(); ?>
+                </div>
             </nav><!-- #site-navigation -->
-            */ ?>
 
        </header><!-- #masthead -->
 

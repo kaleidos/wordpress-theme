@@ -3,6 +3,7 @@
         <div class="entry-date">
             <span class="day"><?php the_time('d'); ?></span>
             <span class="month"><?php the_time('M'); ?></span>
+            <span class="year"><?php the_time('Y'); ?></span>
         </div>
         <div class="entry-author-image">
             <a href="<?php echo get_the_author_meta( 'user_url' ) ?>"

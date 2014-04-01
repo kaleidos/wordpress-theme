@@ -62,8 +62,9 @@
                 wp_reset_postdata();
                 ?>
                 <div class="term-page">
-                    <span class="icon icon-world">
-                         <?php echo _('Ver todos los posts en '); ?>
+                    <span class="icon icon-world"></span>
+                    <span>
+                         <?php echo _('See all posts in '); ?>
                     </span>
                     <?php
                          $terms = get_terms( 'lang', array(
@@ -86,4 +87,4 @@
     </div><!-- #primary -->
 
 <?php /* get_sidebar(); */ ?>
-<?php /* get_footer(); */ ?>
+<?php  get_footer(); ?>
