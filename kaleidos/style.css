@@ -138,7 +138,6 @@ textarea {
     color: #FFF;
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
-    font-size: 1.6rem;
     line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -431,7 +430,6 @@ a:active {
     width: 100%;
     padding: 10px 0;
     background: #2C2C2C;
-    margin-bottom: 30px;
 }
 .main-navigation .wrapper {
     width: 100%;
@@ -811,7 +809,7 @@ object {
 
 /* site-header */
 .site-branding {
-    padding: 100px 0 120px;
+    padding: 6% 0 8%;
     position: relative;
     overflow: hidden;
 
@@ -1142,9 +1140,10 @@ object {
     overflow: hidden;
     width: 100%;
     position: absolute;
-    bottom: 90px;
+    bottom: 60px;
     left: 0;
     height: 4px;
+    opacity: .7;
 }
 
 .square {
@@ -1689,7 +1688,12 @@ object {
         padding-bottom: 50px;
     }
     .language {
-        width: 45%;
+        width: 50%;
+        padding: 0 5%;
+    }
+
+    .language.left{
+        border-right: 1px solid rgba(255,255,255,.1);
     }
 
     .post {

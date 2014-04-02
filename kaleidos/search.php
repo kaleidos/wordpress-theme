@@ -7,32 +7,40 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <section id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+        <?php if ( have_posts()) : ?>
+            <header class="page-header">
+                <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+            </header><!-- .page-header -->
+        <?php endif; ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+        <?php if ( have_posts() && has_term('es', 'lang') ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+        <section class="language spanish left">
 
-				<?php get_template_part( 'content', 'search' ); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+                <?php get_template_part( 'content', 'search' ); ?>
 
-			<?php kaleidos_paging_nav(); ?>
+            <?php endwhile; ?>
 
-		<?php else : ?>
+        </section>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+        <?php elseif ( have_posts() && has_term('en', 'lang') ) : ?>
+        <section class="language engllish right">
 
-		<?php endif; ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+                <?php get_template_part( 'content', 'search' ); ?>
 
-<?php get_sidebar(); ?>
+            <?php endwhile; ?>
+
+        <?php endif; ?>
+        </section>
+
+        </main><!-- #main -->
+   </section><!-- #primary -->
+
 <?php get_footer(); ?>
