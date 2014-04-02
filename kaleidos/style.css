@@ -657,6 +657,16 @@ a:active {
     display: none;
 }
 
+/* Search page */
+
+.search-header {
+    text-align: center;
+}
+
+.search-header span {
+    font-weight: 600;
+    color: #ffb093;
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -796,28 +806,42 @@ object {
 
 /* Top line */
 .language-selector {
-    position: absolute;
-    top: 4%;
-    right: 2%;
     font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .language-selector a, span{
     vertical-align: middle;
-    padding-right: 5px;
+}
+
+.language-selector span{
+    font-size: 3rem;
+    color: rgba(255,255,255,.4);
+    padding: 0 10%;
+}
+
+.language-selector span:before {
+            transform:  rotate(10deg);
+    -webkit-transform:  rotate(10deg);
+    display: inline-block;
+}
+
+.language-selector a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* site-header */
 .site-branding {
     padding: 6% 0 8%;
-    position: relative;
     overflow: hidden;
-
 }
 
-.site-branding::after {
+.site-branding-bg {
     content: "";
-    background: url('images/team.jpg') no-repeat center center transparent ;
+    background: url('images/team.jpg') no-repeat 0 8% transparent ;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1140,7 +1164,7 @@ object {
     overflow: hidden;
     width: 100%;
     position: absolute;
-    bottom: 60px;
+    bottom: 0;
     left: 0;
     height: 4px;
     opacity: .7;

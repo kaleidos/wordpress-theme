@@ -6,13 +6,15 @@
  */
 
 get_header(); ?>
+    <?php get_template_part( 'inc/language', 'selector' ); ?>
 
     <section id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
         <?php if ( have_posts()) : ?>
-            <header class="page-header">
-                <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+            <header class="page-header search-header">
+                <h1 class="page-title">
+                    <?php printf( __( 'Search Results for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
             </header><!-- .page-header -->
         <?php endif; ?>
 

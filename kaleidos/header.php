@@ -31,40 +31,17 @@
             ?>);
       "></div>
       */ ?>
-    <div class="top-animation-wrapper">
-            <?php
-                $editorUsers = get_users();
-                $numItems = count($editorUsers);
-                $i = 0;
-                while ($i < 20) {
-                    $i++;
-                    echo '<div class="square username' . $i . '"></div>';
-                }
-            ?>
-     </div>
-            <div class="language-selector">
+        <div class="top-animation-wrapper">
                 <?php
-                    $terms = get_terms( 'lang', array(
-                        'slug' => 'es'
-                    ) );
-                    foreach ( $terms as $term ) {
-                        $term = sanitize_term( $term, 'lang' );
-                        $term_link = get_term_link( $term, 'lang' );
-                        echo '<a href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
+                    $editorUsers = get_users();
+                    $numItems = count($editorUsers);
+                    $i = 0;
+                    while ($i < 20) {
+                        $i++;
+                        echo '<div class="square username' . $i . '"></div>';
                     }
                 ?>
-                <span class="icon icon-world"></span>
-                <?php
-                    $terms = get_terms( 'lang', array(
-                        'slug' => 'en'
-                    ) );
-                    foreach ( $terms as $term ) {
-                        $term = sanitize_term( $term, 'lang' );
-                        $term_link = get_term_link( $term, 'lang' );
-                        echo '<a href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
-                    }
-                ?>
-            </div>
+         </div>
 
             <div class="site-branding">
                 <h1 class="site-title">
@@ -77,12 +54,12 @@
                 </h2>
             </div>
 
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-                <div class="wrapper">
-                    <?php get_search_form(); ?>
-                </div>
-            </nav><!-- #site-navigation -->
+            <div class="site-branding-bg" data-speed="1"></div>
+    </header><!-- #masthead -->
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+        <div class="wrapper">
+            <?php get_search_form(); ?>
+        </div>
+    </nav><!-- #site-navigation -->
 
-       </header><!-- #masthead -->
-
-<div id="content" class="site-content">
+    <div id="content" class="site-content">
