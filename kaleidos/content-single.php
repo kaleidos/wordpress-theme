@@ -16,7 +16,7 @@
 
     <ul class="entry-meta">
         <li>
-            <small><?php the_category(', ') ?></small>
+            <?php the_category(', ') ?>
         </li>
     </ul>
 

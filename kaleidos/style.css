@@ -693,8 +693,9 @@ a:active {
 }
 .page-content,
 .entry-content,
-.entry-summary {
-    margin: 1.5em 0 0;
+.entry-summary,
+.entry-meta {
+    margin: 1rem 0 0;
 }
 .page-links {
     clear: both;
@@ -1118,8 +1119,12 @@ object {
 
 .single .entry-meta {
     list-style-type: none;
-    margin: 0;
+    margin-left: 0;
     padding: 0;
+}
+
+.single .entry-content {
+    margin: 0;
 }
 
 .single .more-posts ul {

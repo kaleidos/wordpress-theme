@@ -16,8 +16,8 @@
         $bgobj.css({ backgroundPosition: coords });
 
         /* Search fixed */
-        if (wPos > 370) {
-            console.log(true);
+        var headerHeight = $('.site-header').height() + 41;
+        if (wPos > headerHeight) {
             $('.main-navigation').css({
                 'position' : 'fixed',
                 'top' : '0',
@@ -25,10 +25,10 @@
                 'z-index' : 99
             });
         } else {
-            console.log(false);
             $('.main-navigation').removeAttr('style');
         }
     });
+    /*
     var get_tweet = function() {
         console.log('Tweet!');
         $.getJSON("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=kaleidosnet&count=1", function(data) {
@@ -36,5 +36,6 @@
         });
     };
     get_tweet();
+    */
 
 } )( jQuery );

@@ -31,7 +31,7 @@ get_header(); ?>
         </section>
 
         <?php elseif ( have_posts() && has_term('en', 'lang') ) : ?>
-        <section class="language engllish right">
+        <section class="language english right">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
