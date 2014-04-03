@@ -31,22 +31,11 @@
             ?>);
       "></div>
       */ ?>
-        <div class="top-animation-wrapper">
-                <?php
-                    $editorUsers = get_users();
-                    $numItems = count($editorUsers);
-                    $i = 0;
-                    while ($i < 20) {
-                        $i++;
-                        echo '<div class="square username' . $i . '"></div>';
-                    }
-                ?>
-         </div>
 
             <div class="site-branding">
                 <h1 class="site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>">
-                       <img src="<?php bloginfo('template_url') ?>/images/logo.png" alt="Kaleidos" width="130" height="42" />
+                       <img src="<?php bloginfo('template_url') ?>/images/logo.png" alt="Kaleidos" width="183" height="auto" />
                     </a>
                 </h1>
                 <h2 class="site-description">
@@ -54,6 +43,18 @@
                 </h2>
                 <p class="twitter"></p>
             </div>
+
+            <div class="top-animation-wrapper">
+                    <?php
+                        $editorUsers = get_users();
+                        $numItems = count($editorUsers);
+                        $i = 0;
+                        while ($i < 20) {
+                            $i++;
+                            echo '<div class="square username' . $i . '"></div>';
+                        }
+                    ?>
+             </div>
 
             <div class="site-branding-bg" data-speed="1"></div>
     </header><!-- #masthead -->

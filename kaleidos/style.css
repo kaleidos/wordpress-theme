@@ -841,7 +841,7 @@ object {
 
 /* site-header */
 .site-branding {
-    padding: 6% 0 8%;
+    padding: 4% 0 6%;
     overflow: hidden;
 }
 
@@ -861,7 +861,7 @@ object {
 
 .site-title {
     margin: 0 auto;
-    width: 130px;
+    width: 183px;
 }
 
 .site-description {
@@ -1190,19 +1190,17 @@ object {
 .top-animation-wrapper {
     overflow: hidden;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
+    height: 10px;
     opacity: .7;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
 }
 
 .square {
     width: 5%;
-    height: 20px;
-    position: absolute;
     opacity: .5;
-    bottom: 0;
+    float: left;
+    height: 100%;
 }
 
 /*
