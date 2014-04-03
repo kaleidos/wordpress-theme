@@ -52,6 +52,7 @@
                 <h2 class="site-description">
                     <?php bloginfo( 'description' ); ?>
                 </h2>
+                <p class="twitter"></p>
             </div>
 
             <div class="site-branding-bg" data-speed="1"></div>

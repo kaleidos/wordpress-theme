@@ -44,7 +44,7 @@
 
         if ( $the_query->have_posts() ) {
             echo '<div class="related-posts clearfix">';
-            echo '<h3>'. _('Posts relacionados') . '</h3>';
+            echo '<h3>'. _('También te recomendamos') . '</h3>';
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
                 ?>
