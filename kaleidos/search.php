@@ -6,7 +6,9 @@
  */
 
 get_header(); ?>
-    <?php get_template_part( 'inc/language', 'selector' ); ?>
+    <?php if ( have_posts()) : ?>
+        <?php get_template_part( 'inc/language', 'selector' ); ?>
+    <?php endif; ?>
 
     <section id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
@@ -14,7 +16,12 @@ get_header(); ?>
         <?php if ( have_posts()) : ?>
             <header class="page-header search-header">
                 <h1 class="page-title">
-                    <?php printf( __( 'Search Results for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                    <?php printf( __( 'Has buscado: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+            </header><!-- .page-header -->
+        <?php else : ?>
+            <header class="page-header search-header">
+                <h1 class="page-title">
+                    <?php printf( __( 'Lo siento, no hemos encontrado nada para: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
             </header><!-- .page-header -->
         <?php endif; ?>
 
@@ -38,7 +45,6 @@ get_header(); ?>
                 <?php get_template_part( 'content', 'search' ); ?>
 
             <?php endwhile; ?>
-
         <?php endif; ?>
         </section>
 
