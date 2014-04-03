@@ -841,8 +841,10 @@ object {
 
 /* site-header */
 .site-branding {
-    padding: 6% 0 8%;
+    padding: 10px 0;
     overflow: hidden;
+    width: 960px;
+    margin: 0 auto;
 }
 
 .site-branding-bg {
@@ -860,15 +862,19 @@ object {
 }
 
 .site-title {
-    margin: 0 auto;
-    width: 130px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
 }
 
+
 .site-description {
-    text-align: center;
+    display: inline-block;
     color: #988d6f;
-    font-size: 3rem;
-    text-transform: uppercase;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 20px;
 }
 
 /* Main */
@@ -1190,19 +1196,17 @@ object {
 .top-animation-wrapper {
     overflow: hidden;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
+    height: 8px;
     opacity: .7;
+    border-top: 1px solid #000;
+    border-top: 1px solid #000;
 }
 
 .square {
     width: 5%;
-    height: 20px;
-    position: absolute;
+    height: 100%;
     opacity: .5;
-    bottom: 0;
+    float: left;
 }
 
 /*
