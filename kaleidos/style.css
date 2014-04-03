@@ -1168,6 +1168,18 @@ object {
     padding: 0;
 }
 
+/* Archive */
+
+.archive {}
+
+.archive .page-header {
+    padding: 20px 0;
+}
+
+.archive .page-header h1 {
+    font-size: 4rem;
+}
+
 /*--------------------------------------------------------------
 15.0 Header animation
 --------------------------------------------------------------*/

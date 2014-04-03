@@ -64,13 +64,6 @@ get_header(); ?>
                         endif;
                     ?>
                 </h1>
-                <?php
-                    // Show an optional term description.
-                    $term_description = term_description();
-                    if ( ! empty( $term_description ) && !is_tax() ) :
-                        printf( '<p class="taxonomy-description">%s</p>', $term_description );
-                    endif;
-                ?>
                 </header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
