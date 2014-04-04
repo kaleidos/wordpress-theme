@@ -2,7 +2,13 @@
     <label>
         <span class="screen-reader-text">Search for:</span>
     </label>
-    <input list="cats" class="search-field" placeholder="<?php echo _('¿Qué estás buscando?') ?>" value="" name="s" title="Search for:" />
+    <?php if(is_tax( 'lang', 'es' ) || (has_term('es', 'lang') && is_single())  ) : ?>
+        <input list="cats" class="search-field" placeholder="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" />
+    <?php elseif(is_tax( 'lang', 'en' ) || (has_term('en', 'lang') && is_single())) : ?>
+        <input list="cats" class="search-field" placeholder="<?php echo _e('What are you looking for?', 'kaleidos') ?>" value="" name="s" title="<?php echo _e('What are you looking for?', 'kaleidos') ?>" />
+    <?php else : ?>
+        <input list="cats" class="search-field" placeholder="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" />
+    <?php endif; ?>
     <datalist id="cats">
         <?php
             $cats = get_categories();
