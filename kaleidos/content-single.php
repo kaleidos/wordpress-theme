@@ -34,17 +34,27 @@
 
     <?php
         $category = get_the_category();
+        $terms = get_the_terms( $post->ID, 'lang' );
+        $postid = get_the_ID();
         $the_query = new WP_Query(
             array(
                 'cat' => $category[0]->term_id,
+                'lang' => $terms[3]->slug,
                 'orderby' => 'rand',
-                'posts_per_page' => '2'
+                'posts_per_page' => '2',
+                'post__not_in' => array( $postid )
             )
          );
 
         if ( $the_query->have_posts() ) {
             echo '<div class="related-posts clearfix">';
-            echo '<h3>'. _('También te recomendamos') . '</h3>';
+            if (has_term('es', 'lang')) :
+                echo '<h3>'. _('También te recomendamos') . '</h3>';
+            elseif (has_term('en', 'lang')) :
+                echo '<h3>'. _('We also recommend you') . '</h3>';
+            else :
+                echo '<h3>'. _('También te recomendamos') . '</h3>';
+            endif;
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
                 ?>
