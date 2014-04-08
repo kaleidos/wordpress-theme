@@ -16,12 +16,12 @@ get_header(); ?>
         <?php if ( have_posts()) : ?>
             <header class="page-header search-header">
                 <h1 class="page-title">
-                    <?php printf( __( 'Has buscado: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                    <?php printf( __( 'You searched for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
             </header><!-- .page-header -->
         <?php else : ?>
             <header class="page-header search-header">
                 <h1 class="page-title">
-                    <?php printf( __( 'Lo siento, no hemos encontrado nada para: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                    <?php printf( __( 'Sorry, we did not found nothing for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
             </header><!-- .page-header -->
         <?php endif; ?>
 

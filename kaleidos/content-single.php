@@ -39,7 +39,7 @@
         $the_query = new WP_Query(
             array(
                 'cat' => $category[0]->term_id,
-                'lang' => $terms[3]->slug,
+                //'lang' => $terms[3]->slug,
                 'orderby' => 'rand',
                 'posts_per_page' => '2',
                 'post__not_in' => array( $postid )
@@ -49,11 +49,11 @@
         if ( $the_query->have_posts() ) {
             echo '<div class="related-posts clearfix">';
             if (has_term('es', 'lang')) :
-                echo '<h3>'. _('También te recomendamos') . '</h3>';
+                echo '<h3>'. __('También te recomendamos', 'kaleidos') . '</h3>';
             elseif (has_term('en', 'lang')) :
-                echo '<h3>'. _('We also recommend you') . '</h3>';
+                echo '<h3>'. __('We also recommend you', 'kaleidos') . '</h3>';
             else :
-                echo '<h3>'. _('También te recomendamos') . '</h3>';
+                echo '<h3>'. __('También te recomendamos', 'kaleidos') . '</h3>';
             endif;
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();

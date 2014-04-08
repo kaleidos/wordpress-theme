@@ -3,11 +3,11 @@
         <span class="screen-reader-text">Search for:</span>
     </label>
     <?php if(is_tax( 'lang', 'es' ) || (has_term('es', 'lang') && is_single())  ) : ?>
-        <input list="cats" class="search-field" placeholder="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" />
+        <input list="cats" class="search-field" placeholder="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" />
     <?php elseif(is_tax( 'lang', 'en' ) || (has_term('en', 'lang') && is_single())) : ?>
-        <input list="cats" class="search-field" placeholder="<?php echo _e('What are you looking for?', 'kaleidos') ?>" value="" name="s" title="<?php echo _e('What are you looking for?', 'kaleidos') ?>" />
+        <input list="cats" class="search-field" placeholder="<?php echo __('What are you looking for?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('What are you looking for?', 'kaleidos') ?>" />
     <?php else : ?>
-        <input list="cats" class="search-field" placeholder="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo _e('¿Qué estás buscando?', 'kaleidos') ?>" />
+        <input list="cats" class="search-field" placeholder="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" />
     <?php endif; ?>
     <datalist id="cats">
         <?php

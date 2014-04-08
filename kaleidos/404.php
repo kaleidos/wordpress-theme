@@ -16,25 +16,25 @@ get_header(); ?>
                         <?php _e( '404', 'kaleidos' ); ?>
                     </h1>
                     <h3>
-                        <?php _e('Ups, la página que buscas no existe', 'kaleidos') ?>
+                        <?php __('Ups, the page you are looking for doesn&#39;t exist', 'kaleidos') ?>
                     </h3>
                 </header><!-- .page-header -->
 
                 <div class="page-content">
                     <p>
-                        <?php _e( 'Parece por aquí no hay nada. ¿Qué prefieres hacer?', 'kaleidos' ); ?>
+                        <?php __( 'There&#39;s nothing around. What you want to do?', 'kaleidos' ); ?>
                     </p>
                     <ul>
                         <li>
-                            <a href="" title="<?php _e('Volver a la home', 'kaleidos') ?>">
-                                <?php _e('Volver a la home', 'kaleidos'); ?>
+                            <a href="" title="<?php __('Go back to homepage', 'kaleidos') ?>">
+                                <?php __('Go back to homepage', 'kaleidos') ?>
                             </a>
                         </li>
                         <li>
-                            <?php _e('Usa el buscador en la parte superior de la página', 'kaleidos'); ?>
+                            <?php __('Use the searchform at the top', 'kaleidos'); ?>
                         </li>
                         <li>
-                            <?php _e('Sigue leyendo nuestros posts más comentados:', 'kaleidos'); ?>
+                            <?php __('Keep reading our top commented posts:', 'kaleidos'); ?>
                         </li>
                     </ul>
                     <?php

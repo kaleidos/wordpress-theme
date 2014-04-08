@@ -48,7 +48,7 @@
                 ?>
                 <section class="more-posts">
                     <h3>
-                        <?php echo _('Top posts'); ?>
+                        <?php echo __('Top posts', 'kaleidos'); ?>
                     </h3>
                     <ul>
                 <?php

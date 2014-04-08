@@ -25,7 +25,7 @@
 
                 <div class="term-page">
                     <span class="icon icon-world">
-                         <?php echo _('Ver todos los posts en '); ?>
+                         <?php echo __('See all posts in ', 'kaleidos'); ?>
                     </span>
                     <?php
                          $terms = get_terms( 'lang', array(
@@ -41,7 +41,9 @@
 
             </section>
             <?php else : ?>
-                <p>Mmmm...parece que no hay posts con esta query</p>
+                <p>
+                    <?php __('Mmmm...seems that there are no results for this query', 'kaleidos') ?>
+                </p>
             <?php endif; ?>
 
             <?php
@@ -65,7 +67,7 @@
                 <div class="term-page">
                     <span class="icon icon-world"></span>
                     <span>
-                         <?php echo _('See all posts in '); ?>
+                         <?php echo __('See all posts in ', 'kaleidos'); ?>
                     </span>
                     <?php
                          $terms = get_terms( 'lang', array(
@@ -81,7 +83,9 @@
 
             </section>
             <?php else : ?>
-                <p>Mmmm...parece que no hay posts con esta query</p>
+                <p>
+                    <?php __('Mmmm...seems that there are no results for this query', 'kaleidos') ?>
+                </p>
             <?php endif; ?>
 
         </main><!-- #main -->

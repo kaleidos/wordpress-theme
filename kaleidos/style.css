@@ -841,8 +841,31 @@ object {
 
 /* site-header */
 .site-branding {
-    padding: 4% 0 6%;
+    padding: 4% 0 5%;
     overflow: hidden;
+}
+
+.site-branding.single-site-branding {
+    padding: 10px 0;
+    overflow: hidden;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.site-branding.single-site-branding .site-title {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+
+.site-branding.single-site-branding .site-description {
+    display: inline-block;
+    color: #988d6f;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 20px;
 }
 
 .site-branding-bg {

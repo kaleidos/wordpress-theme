@@ -1,0 +1,414 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kaleidos v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-04-04 12:08:26+0000\n"
+"Last-Translator: kaleidos <pablo.ruiz@kaleidos.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:16
+#@ kaleidos
+msgid "404"
+msgstr "404"
+
+#: 404.php:19
+#@ kaleidos
+msgid "Ups, the page you are looking for doesn&#39;t exist"
+msgstr "Ups, la página que estás buscando no existe"
+
+#: 404.php:25
+#@ kaleidos
+msgid "There&#39;s nothing around. What you want to do?"
+msgstr "Parece que no hay nada por aquí, ¿Qué hacemos?"
+
+#: 404.php:29
+#: 404.php:30
+#@ kaleidos
+msgid "Go back to homepage"
+msgstr "Volver a la home"
+
+#: 404.php:34
+#@ kaleidos
+msgid "Use the searchform at the top"
+msgstr "Usa el buscador en la parte de arriba de la página"
+
+#: 404.php:37
+#@ kaleidos
+msgid "Keep reading our top commented posts:"
+msgstr "Sigue leyendo nuestros top posts"
+
+#: archive.php:26
+#, php-format
+#@ kaleidos
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:29
+#, php-format
+#@ kaleidos
+msgid "Day: %s"
+msgstr "Día: %s"
+
+#: archive.php:32
+#, php-format
+#@ kaleidos
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+#: archive.php:32
+#@ kaleidos
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:35
+#, php-format
+#@ kaleidos
+msgid "Year: %s"
+msgstr "Year: %s"
+
+#: archive.php:35
+#@ kaleidos
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:38
+#@ kaleidos
+msgid "Asides"
+msgstr "Asides"
+
+#: archive.php:41
+#@ kaleidos
+msgid "Galleries"
+msgstr "Galerías"
+
+#: archive.php:44
+#@ kaleidos
+msgid "Images"
+msgstr "Imágenes"
+
+#: archive.php:47
+#@ kaleidos
+msgid "Videos"
+msgstr "Videos"
+
+#: archive.php:50
+#@ kaleidos
+msgid "Quotes"
+msgstr "Citas"
+
+#: archive.php:53
+#@ kaleidos
+msgid "Links"
+msgstr "Enlaces"
+
+#: archive.php:56
+#@ kaleidos
+msgid "Statuses"
+msgstr "Actualizaciones"
+
+#: archive.php:59
+#@ kaleidos
+msgid "Audios"
+msgstr "Audios"
+
+#: archive.php:62
+#@ kaleidos
+msgid "Chats"
+msgstr "Chats"
+
+#: comments.php:28
+#, php-format
+#@ kaleidos
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Una idea en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s ideas en &ldquo;%2$s&rdquo;"
+
+#: comments.php:35
+#: comments.php:52
+#@ kaleidos
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: comments.php:36
+#: comments.php:53
+#@ kaleidos
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios antiguos"
+
+#: comments.php:37
+#: comments.php:54
+#@ kaleidos
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios recientes &rarr;"
+
+#: comments.php:64
+#@ kaleidos
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: content-none.php:13
+#@ kaleidos
+msgid "Nothing Found"
+msgstr "No encontrado"
+
+#: content-none.php:19
+#, php-format
+#@ kaleidos
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "¿Preparado para publicar tu primer post? <a href=\"%1$s\">Empieza aquí</a>."
+
+#: content-none.php:23
+#@ kaleidos
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Lo siento, pero nada coincide con tus términos de búsqueda. Prueba de nuevo con otro texto."
+
+#: content-none.php:27
+#@ kaleidos
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que no hemos encontrado lo que estás buscando. Quizá usando el buscador... "
+
+#: content-page.php:18
+#: content-single.php:27
+#: content.php:27
+#@ kaleidos
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: content-page.php:23
+#: content-single.php:12
+#: content.php:61
+#@ kaleidos
+msgid "Edit"
+msgstr "Editar"
+
+#: content-single.php:52
+#: content-single.php:56
+#@ kaleidos
+msgid "También te recomendamos"
+msgstr ""
+
+#: content-single.php:54
+#@ kaleidos
+msgid "We also recommend you"
+msgstr ""
+
+#: content.php:24
+#@ kaleidos
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continúa leyendo <span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: used between list items, there is a space after the comma
+#: content.php:38
+#: content.php:48
+#@ kaleidos
+msgid ", "
+msgstr ","
+
+#: content.php:42
+#, php-format
+#@ kaleidos
+msgid "Posted in %1$s"
+msgstr "Posteado en %1$s"
+
+#: content.php:52
+#, php-format
+#@ kaleidos
+msgid "Tagged %1$s"
+msgstr "Tagueado %1$s"
+
+#: content.php:58
+#@ kaleidos
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: content.php:58
+#@ kaleidos
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: content.php:58
+#@ kaleidos
+msgid "% Comments"
+msgstr "% comentarios"
+
+#: front-page.php:28
+#: front-page.php:70
+#@ kaleidos
+msgid "See all posts in "
+msgstr "Ver todos los posts en"
+
+#: front-page.php:45
+#: front-page.php:87
+#@ kaleidos
+msgid "Mmmm...seems that there are no results for this query"
+msgstr "Mmmm....parece que no hay resultados para esta búsqueda"
+
+#: functions.php:45
+#@ kaleidos
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions.php:70
+#@ kaleidos
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:132
+#@ default
+msgctxt "taxonomy general name"
+msgid "Languages"
+msgstr ""
+
+#: functions.php:133
+#@ default
+msgctxt "taxonomy singular name"
+msgid "Language"
+msgstr ""
+
+#: functions.php:134
+#@ default
+msgid "Search Languages"
+msgstr ""
+
+#: functions.php:135
+#@ default
+msgid "All Languages"
+msgstr ""
+
+#: functions.php:136
+#@ default
+msgid "Parent Language"
+msgstr ""
+
+#: functions.php:137
+#@ default
+msgid "Parent Languages:"
+msgstr ""
+
+#: functions.php:138
+#@ default
+msgid "Edit Language"
+msgstr ""
+
+#: functions.php:139
+#@ default
+msgid "Update Languages"
+msgstr ""
+
+#: functions.php:140
+#@ default
+msgid "Add New Languages"
+msgstr ""
+
+#: functions.php:141
+#@ default
+msgid "New Languages Name"
+msgstr ""
+
+#: functions.php:142
+#@ default
+msgid "Language"
+msgstr ""
+
+#: inc/extras.php:63
+#, php-format
+#@ kaleidos
+msgid "Page %s"
+msgstr "Página %s"
+
+#: inc/template-tags.php:23
+#@ kaleidos
+msgid "Posts navigation"
+msgstr "Navegación entre posts"
+
+#: inc/template-tags.php:27
+#@ kaleidos
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Posts antiguos"
+
+#: inc/template-tags.php:31
+#@ kaleidos
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Posts recientes <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:56
+#@ kaleidos
+msgid "Post navigation"
+msgstr "Navegación entre posts"
+
+#: inc/template-tags.php:59
+#, php-format
+#@ kaleidos
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: inc/template-tags.php:60
+#, php-format
+#@ kaleidos
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:85
+#, php-format
+#@ kaleidos
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Posteado el %1$s</span><span class=\"byline\"> por %2$s</span>"
+
+#: searchform.php:6
+#: searchform.php:10
+#@ kaleidos
+msgid "¿Qué estás buscando?"
+msgstr ""
+
+#: searchform.php:8
+#@ kaleidos
+msgid "What are you looking for?"
+msgstr ""
+
+#: sidebar.php:51
+#@ kaleidos
+msgid "Top posts"
+msgstr ""
+
+#: sidebar.php:86
+#@ kaleidos
+msgid "Archives"
+msgstr "Archivos"
+
+#: sidebar.php:93
+#@ kaleidos
+msgid "Meta"
+msgstr "Meta"
+
+#: search.php:19
+#, php-format
+#@ kaleidos
+msgid "You searched for: %s"
+msgstr "Has buscado: %s"
+
+#: search.php:24
+#, php-format
+#@ kaleidos
+msgid "Sorry, we did not found nothing for: %s"
+msgstr "Lo siento, no hemos encontrado nada para : %s"
+
