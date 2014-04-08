@@ -15,33 +15,30 @@
     <div id="page" class="hfeed site">
 
     <header id="masthead" class="site-header" role="banner">
-    <?php /*
-    <div class="top-color" style="background: linear-gradient(to right,
-            <?php
-                $editorUsers = get_users();
-                $numItems = count($editorUsers);
-                $i = 0;
-                foreach ($editorUsers as $key => $user) {
-                    if(++$i != $numItems) {
-                        echo $user->user_color . ', ';
-                    } else {
-                        echo $user->user_color;
-                    }
-                }
-            ?>);
-      "></div>
-      */ ?>
-
+        <?php if ( !is_singular() ) { ?>
             <div class="site-branding">
                 <h1 class="site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>">
-                       <img src="<?php bloginfo('template_url') ?>/images/logo.png" alt="Kaleidos" width="183" height="auto" />
+                        <img src="<?php bloginfo('template_url') ?>/images/logo.png" alt="Kaleidos" width="183" height="auto" />
                     </a>
                 </h1>
                 <h2 class="site-description">
                     <?php bloginfo( 'description' ); ?>
                 </h2>
             </div>
+            <div class="site-branding-bg" data-speed="1"></div>
+        <?php } else { ?>
+            <div class="site-branding single-site-branding">
+                <h1 class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>">
+                        <img src="<?php bloginfo('template_url') ?>/images/logo.png" alt="Kaleidos" width="183" height="auto" />
+                    </a>
+                </h1>
+                <h2 class="site-description">
+                    <?php bloginfo( 'description' ); ?>
+                </h2>
+            </div>
+        <?php } ?>
 
             <div class="top-animation-wrapper">
                     <?php
@@ -55,7 +52,6 @@
                     ?>
              </div>
 
-            <div class="site-branding-bg" data-speed="1"></div>
     </header><!-- #masthead -->
     <nav id="site-navigation" class="main-navigation" role="navigation">
         <div class="wrapper">
