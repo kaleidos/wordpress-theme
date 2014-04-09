@@ -26,7 +26,7 @@
                     <?php bloginfo( 'description' ); ?>
                 </h2>
             </div>
-            <div class="site-branding-bg" data-speed="1"></div>
+            <div class="site-branding-bg" data-speed="0.5"></div>
         <?php } else { ?>
             <div class="site-branding single-site-branding">
                 <h1 class="site-title">

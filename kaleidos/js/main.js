@@ -12,7 +12,7 @@
         var $bgobj = $('.site-branding-bg');
         var wPos = $window.scrollTop();
         var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-        var coords = '50% '+ yPos + 'px';
+        var coords = 'center '+ (yPos + 25) + 'px';
         $bgobj.css({ backgroundPosition: coords });
 
         /* Search fixed */

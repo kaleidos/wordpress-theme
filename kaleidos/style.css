@@ -863,14 +863,14 @@ object {
 .site-branding.single-site-branding .site-description {
     display: inline-block;
     color: #988d6f;
-    font-size: 24px;
+    font-size: 15px;
     vertical-align: middle;
     margin-left: 20px;
 }
 
 .site-branding-bg {
     content: "";
-    background: url('images/team.jpg') no-repeat 0 8% transparent ;
+    background: url('images/team02.jpg') no-repeat 0 0 transparent ;
     top: 0;
     left: 0;
     bottom: 0;
@@ -879,7 +879,7 @@ object {
     position: absolute;
     z-index: -1;
     background-size: cover;
-    -webkit-filter: grayscale(100%);
+    /*-webkit-filter: grayscale(100%);*/
 }
 
 .site-title {
@@ -1099,6 +1099,10 @@ object {
 
 .single .post {
     padding-left: 0;
+}
+
+.single .post img {
+    max-width: 320px;
 }
 
 .single .entry-date {
@@ -1769,6 +1773,10 @@ object {
 
     .hide-on-mobile {
         display: block;
+    }
+
+    .site-branding.single-site-branding .site-description {
+        font-size: 24px;
     }
 
     .main-navigation .wrapper {
