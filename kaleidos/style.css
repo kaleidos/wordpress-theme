@@ -1042,6 +1042,7 @@ object {
     text-align: left;
     padding-bottom: 5px;
     opacity: .5;
+    margin: 0;
 }
 
 .entry-meta.category a {
@@ -1171,8 +1172,8 @@ object {
 
 .single .entry-meta {
     list-style-type: none;
-    margin-left: 0;
-    padding: 0;
+    padding-bottom: 5px;
+    margin-top: 1em;
 }
 
 .single .entry-content {
