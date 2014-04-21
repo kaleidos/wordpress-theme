@@ -14,11 +14,9 @@
         </h1>
     </header><!-- .entry-header -->
 
-    <ul class="entry-meta">
-        <li>
-            <?php the_category(', ') ?>
-        </li>
-    </ul>
+    <div class="entry-meta category">
+            <?php the_category(' ') ?>
+    </div>
 
     <div class="entry-content">
         <?php the_content(); ?>

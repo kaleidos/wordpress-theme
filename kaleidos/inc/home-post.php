@@ -38,8 +38,8 @@
                 <?php the_title(); ?>
             </a>
         </h1>
-        <div class="entry-meta">
-            <?php the_category(', ') ?>
+        <div class="entry-meta category">
+            <?php the_category(' ') ?>
         </div>
         <?php the_excerpt() ?>
     </div>
