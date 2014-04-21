@@ -24,7 +24,8 @@
                 ?>
 
                 <div class="term-page">
-                    <span class="icon icon-world">
+                    <span class="icon icon-world"></span>
+                    <span>
                          <?php echo __('See all posts in ', 'kaleidos'); ?>
                     </span>
                     <?php
