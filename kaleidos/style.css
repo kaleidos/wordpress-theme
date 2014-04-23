@@ -1889,6 +1889,10 @@ object {
         float: right;
     }
 
+    .single .post img {
+        max-width: 650px;
+    }
+
     .related-posts .single-related-post {
         width: 48%;
         float: left;
