@@ -1272,8 +1272,10 @@ object {
 .kaleidos-site {
     color: #FFF;
     position: absolute;
-    bottom: 5%;
+    bottom: 15px;
     right: 1%;
+    padding: 5px 15px;
+    background: rgba(0,0,0, .2);
 }
 
 .top-animation-wrapper {
