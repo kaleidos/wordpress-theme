@@ -8,7 +8,6 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
-        /* Analytics */
         <script type="text/javascript">
 
             var _gaq = _gaq || [];
@@ -23,7 +22,6 @@
             })();
 
         </script>
-        /* /Analytics */
 
         <?php wp_head(); ?>
     </head>
