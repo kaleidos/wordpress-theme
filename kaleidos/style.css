@@ -163,7 +163,7 @@ address {
     margin: 0 0 1.5em;
 }
 pre {
-    background: #eee;
+    background: #000;
     font-family: "Courier 10 Pitch", Courier, monospace;
     font-size: 15px;
     font-size: 1.5rem;
@@ -172,6 +172,7 @@ pre {
     max-width: 100%;
     overflow: auto;
     padding: 1.6em;
+    color: #7FFF00;
 }
 code, kbd, tt, var {
     font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -1125,6 +1126,7 @@ object {
 
 .single .post {
     padding-left: 0;
+    position: relative;
 }
 
 .single .post img {
@@ -1133,9 +1135,6 @@ object {
 
 .single .entry-date {
     position: relative;
-    top: 0;
-    left: 0;
-    width: auto;
 }
 
 .single .entry-author {
@@ -1238,6 +1237,13 @@ object {
 --------------------------------------------------------------*/
 .site-header {
     position: relative;
+}
+
+.kaleidos-site {
+    color: #FFF;
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
 }
 
 .top-animation-wrapper {
@@ -1830,11 +1836,14 @@ object {
         padding-left: 60px;
     }
 
-    .entry-date {
+    .entry-date, .single .entry-date {
         position: absolute;
         width: 60px;
         top: 85px;
         left: -70px;
+    }
+    .single .entry-date {
+        top: 6px;
     }
     .entry-date .day,
     .entry-date .month,

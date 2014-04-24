@@ -40,17 +40,21 @@
             </div>
         <?php } ?>
 
-            <div class="top-animation-wrapper">
-                    <?php
-                        $editorUsers = get_users();
-                        $numItems = count($editorUsers);
-                        $i = 0;
-                        while ($i < 20) {
-                            $i++;
-                            echo '<div class="square username' . $i . '"></div>';
-                        }
-                    ?>
-             </div>
+           <div class="top-animation-wrapper">
+                  <?php
+                       $editorUsers = get_users();
+                       $numItems = count($editorUsers);
+                       $i = 0;
+                       while ($i < 20) {
+                           $i++;
+                           echo '<div class="square username' . $i . '"></div>';
+                       }
+                   ?>
+            </div>
+
+            <a href="http://kaleidos.net" class="kaleidos-site hide-on-mobile" rel="nofollow" target="_blank" >
+                <?php echo __('Visit', 'kaleidos') ?> kaleidos.net
+            </a>
 
     </header><!-- #masthead -->
     <nav id="site-navigation" class="main-navigation" role="navigation">
