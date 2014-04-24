@@ -3,20 +3,12 @@
         <span class="screen-reader-text">Search for:</span>
     </label>
     <?php if(is_tax( 'lang', 'es' ) || (has_term('es', 'lang') && is_single())  ) : ?>
-        <input list="cats" class="search-field" placeholder="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" />
+        <input class="search-field" placeholder="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" />
     <?php elseif(is_tax( 'lang', 'en' ) || (has_term('en', 'lang') && is_single())) : ?>
-        <input list="cats" class="search-field" placeholder="<?php echo __('What are you looking for?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('What are you looking for?', 'kaleidos') ?>" />
+        <input class="search-field" placeholder="<?php echo __('What are you looking for?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('What are you looking for?', 'kaleidos') ?>" />
     <?php else : ?>
-        <input list="cats" class="search-field" placeholder="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" />
+        <input class="search-field" placeholder="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" value="" name="s" title="<?php echo __('¿Qué estás buscando?', 'kaleidos') ?>" />
     <?php endif; ?>
-    <datalist id="cats">
-        <?php
-            $cats = get_categories();
-            foreach( $cats as $cat ) {
-                echo '<option value="' . $cat->cat_name . '">';
-            }
-        ?>
-    </datalist>
-    <input type="button" class="button-submit" value="&rarr;" />
+    <a href="#" class="button-submit icon icon-search"></a>
     <input type="submit" class="search-submit" value="Search" />
 </form>

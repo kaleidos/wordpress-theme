@@ -262,6 +262,16 @@ big {
 .icon-link:before {
   content: "b";
 }
+.icon-bug:before {
+  content: "c";
+}
+.icon-iocaine:before {
+  content: "d";
+}
+.icon-search:before {
+  content: "e";
+}
+
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -399,6 +409,16 @@ textarea {
     padding-left: 3px;
     vertical-align: top; /* Improves readability and alignment in all browsers */
     width: 98%;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(255, 255, 255, 0.2);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgba(255, 255, 255, 0.2)
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgba(255, 255, 255, 0.2)
 }
 
 /*--------------------------------------------------------------
@@ -640,11 +660,11 @@ a:active {
 .search-form .button-submit,
 .search-form .button-submit:hover {
     position: absolute;
-    top: 0;
+    top: 4px;
     right: 0;
     border: none;
     background: transparent;
-    font-size: 2em;
+    font-size: 1.2em;
     line-height: 1;
     color: #988d6f;
     border-radius: none;
