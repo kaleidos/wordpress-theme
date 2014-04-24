@@ -899,7 +899,7 @@ object {
 
 .site-branding-bg {
     content: "";
-    background: url('images/team02.jpg') no-repeat 0 -200px transparent ;
+    background: url('images/team02.jpg') no-repeat 0 0 transparent ;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1842,7 +1842,7 @@ object {
     }
 
     .site-branding-bg {
-        background-position:  0 0;
+        background-position:  0 -200px;
     }
 
     .main-navigation .wrapper {
