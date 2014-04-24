@@ -16,25 +16,25 @@ get_header(); ?>
                         <?php _e( '404', 'kaleidos' ); ?>
                     </h1>
                     <h3>
-                        <?php __('Ups, the page you are looking for doesn&#39;t exist', 'kaleidos') ?>
+                        <?php echo __('Ups, the page you are looking for doesn&#39;t exist', 'kaleidos') ?>
                     </h3>
                 </header><!-- .page-header -->
 
                 <div class="page-content">
                     <p>
-                        <?php __( 'There&#39;s nothing around. What you want to do?', 'kaleidos' ); ?>
+                        <?php echo __( 'There&#39;s nothing around. What you want to do?', 'kaleidos' ); ?>
                     </p>
                     <ul>
                         <li>
                             <a href="" title="<?php __('Go back to homepage', 'kaleidos') ?>">
-                                <?php __('Go back to homepage', 'kaleidos') ?>
+                                <?php echo __('Go back to homepage', 'kaleidos') ?>
                             </a>
                         </li>
                         <li>
-                            <?php __('Use the searchform at the top', 'kaleidos'); ?>
+                            <?php echo __('Use the searchform at the top', 'kaleidos'); ?>
                         </li>
                         <li>
-                            <?php __('Keep reading our top commented posts:', 'kaleidos'); ?>
+                            <?php echo __('Keep reading our top commented posts:', 'kaleidos'); ?>
                         </li>
                     </ul>
                     <?php
