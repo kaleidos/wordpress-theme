@@ -40,14 +40,5 @@
             $('.main-navigation').removeAttr('style');
         }
     });
-    /*
-    var get_tweet = function() {
-        console.log('Tweet!');
-        $.getJSON("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=kaleidosnet&count=1", function(data) {
-            $(".twitter").html(data[0].text);
-        });
-    };
-    get_tweet();
-    */
 
 } )( jQuery );
