@@ -1841,6 +1841,10 @@ object {
         font-size: 24px;
     }
 
+    .site-branding-bg {
+        background-position:  0 0;
+    }
+
     .main-navigation .wrapper {
         width: 960px;
         margin: 0 auto;
