@@ -657,8 +657,7 @@ a:active {
     border-bottom: 1px solid rgba(152,141,111,1);
 }
 
-.search-form .button-submit,
-.search-form .button-submit:hover {
+.search-form .button-submit {
     position: absolute;
     top: 4px;
     right: 0;
@@ -673,10 +672,9 @@ a:active {
     text-shadow: none;
 }
 
-.search-form .button-submit:focus {
-    outline: 0;
-    box-shadow: none;
+.search-form .button-submit:hover {
     color: #FFF;
+    transition: color .3s;
 }
 
 .search-submit {
