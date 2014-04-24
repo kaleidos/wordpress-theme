@@ -804,6 +804,16 @@ object {
     max-width: 100%;
 }
 
+.entry-content img.alignleft {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.entry-content img.alignright {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
 /*--------------------------------------------------------------
 13.0 Helpers
 --------------------------------------------------------------*/
