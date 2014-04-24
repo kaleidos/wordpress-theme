@@ -877,7 +877,7 @@ object {
 .site-branding.single-site-branding {
     padding: 10px 0;
     overflow: hidden;
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -1835,6 +1835,10 @@ object {
 
     .hide-on-mobile {
         display: block;
+    }
+
+    .site-branding.single-site-branding {
+        width: 960px;
     }
 
     .site-branding.single-site-branding .site-description {
