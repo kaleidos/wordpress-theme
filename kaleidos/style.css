@@ -742,7 +742,7 @@ a:active {
 .bypostauthor {
 }
 
-.comment-list article {
+.single .comment-list article {
     float: none;
 }
 
