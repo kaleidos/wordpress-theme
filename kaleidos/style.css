@@ -742,6 +742,10 @@ a:active {
 .bypostauthor {
 }
 
+.comment-list article {
+    float: none;
+}
+
 .comments-count {
     position: absolute;
     top: 145px;
