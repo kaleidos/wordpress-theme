@@ -5,6 +5,16 @@
             <span class="month"><?php the_time('M'); ?></span>
             <span class="year"><?php the_time('Y'); ?></span>
         </div>
+        <div class="comments-count">
+            <?php
+                $num_comments = get_comments_number();
+                if ( $num_comments > 0 ) {
+                    $comments = $num_comments;
+                    echo '<span class="icon icon-comment"></span>';
+                    echo '<a href="' . get_comments_link() .'">'. $comments.'</a>';
+                }
+            ?>
+        </div>
         <div class="entry-author-image">
             <a href="<?php echo get_the_author_meta( 'user_url' ) ?>"
                title="<?php echo get_the_author_meta( 'name' ) ?>" target="_blank">

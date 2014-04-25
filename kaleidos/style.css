@@ -218,6 +218,8 @@ big {
     vertical-align: middle;
 }
 
+@charset "UTF-8";
+
 @font-face {
   font-family: "kaleidos-blog";
   src:url("fonts/kaleidos-blog.eot");
@@ -271,7 +273,9 @@ big {
 .icon-search:before {
   content: "e";
 }
-
+.icon-comment:before {
+  content: "f";
+}
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -736,6 +740,33 @@ a:active {
     word-wrap: break-word;
 }
 .bypostauthor {
+}
+
+.comments-count {
+    position: absolute;
+    top: 145px;
+    left: -70px;
+}
+
+.comments-count a {
+    color: #585858;
+    font-size: 19px;
+    padding: 3px 8px;
+    position: relative;
+    right: 45px;
+    text-align: center;
+    bottom: 1px;
+}
+
+.comments-count span {
+    color: #585858;
+    font-size: 56px;
+    opacity: .4;
+}
+
+.comments-count a:hover {
+    color: #ffb093;
+    transition: color .3s;
 }
 
 /*--------------------------------------------------------------
