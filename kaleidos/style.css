@@ -739,6 +739,7 @@ a:active {
 .comment-content a {
     word-wrap: break-word;
 }
+
 .bypostauthor {
 }
 
@@ -1881,7 +1882,7 @@ object {
     }
 
     .site-branding-bg {
-        background-position:  0 -200px;
+        background-position:  50% 30%;
     }
 
     .main-navigation .wrapper {
