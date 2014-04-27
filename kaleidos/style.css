@@ -736,6 +736,11 @@ a:active {
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
+
+.comment {
+    padding: 10px 0;
+}
+
 .comment-content a {
     word-wrap: break-word;
 }
@@ -1264,6 +1269,10 @@ object {
 }
 
 /* Related posts */
+.related-posts {
+    background: #222 ;
+}
+
 .related-posts h3 {
     font-size: 2rem;
     padding: 20px;
