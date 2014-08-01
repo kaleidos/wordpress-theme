@@ -1153,10 +1153,12 @@ object {
 }
 
 .entry-content h1 {
+    color: #ffc964;
     font-size: 3.5rem;
 }
 
 .entry-content h2 {
+    color: #ffc964;
     font-size: 2.5rem;
 }
 
@@ -1241,7 +1243,7 @@ object {
 
 .single .entry-meta {
     list-style-type: none;
-    padding-bottom: 5px;
+    padding-bottom: 1em;
     margin-top: 1em;
 }
 
