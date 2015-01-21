@@ -21,7 +21,7 @@ get_header(); ?>
         <?php else : ?>
             <header class="page-header search-header">
                 <h1 class="page-title">
-                    <?php printf( __( 'Sorry, we did not found nothing for: %s', 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                    <?php printf( __( "Sorry, we couldn't find anything for: %s", 'kaleidos' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
             </header><!-- .page-header -->
         <?php endif; ?>
 

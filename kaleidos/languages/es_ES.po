@@ -409,6 +409,5 @@ msgstr "Has buscado: %s"
 #: search.php:24
 #, php-format
 #@ kaleidos
-msgid "Sorry, we did not found nothing for: %s"
+msgid "Sorry, we couldn't find anything for: %s"
 msgstr "Lo siento, no hemos encontrado nada para : %s"
-
